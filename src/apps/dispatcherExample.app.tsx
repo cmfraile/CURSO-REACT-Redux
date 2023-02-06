@@ -10,8 +10,8 @@ const DispatcherExample = ():JSX.Element => {
 
   return (
     <div className="container">
-      <div className="row my-3"><div className="col"><h1>REACT/REDUX</h1><h3>Ejemplo de dispatcher</h3></div></div>
-      <div className="row my-3"><div className="col">
+      <div className="row my-5"><div className="col"><h1>REACT/REDUX</h1><h3>Ejemplo de dispatcher</h3></div></div>
+      <div className="row my-5"><div className="col">
       <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -30,7 +30,7 @@ const DispatcherExample = ():JSX.Element => {
             />
             </form>
       </div></div>
-      <div className="row my-3"><div className="col">
+      <div className="row my-5"><div className="col">
         {(todos.length > 0) &&
         <>
           <h3>{todos.length}</h3>
