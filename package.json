@@ -9,9 +9,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/underscore": "^1.11.4",
     "bootstrap": "^5.2.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "underscore": "^1.13.6"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",
