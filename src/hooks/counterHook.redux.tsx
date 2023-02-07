@@ -8,10 +8,14 @@ export const counterReduxHook = () => {
     const dispatch = useDispatch();
 
     const increment = () => {dispatch(counterSlice.actions.increment())};
+    const decrement = () => {dispatch(counterSlice.actions.decrement())};
+    const changeByAmount = (newValue:number) => {
+        dispatch(counterSlice.actions.changeByAmount(newValue));
+    };
 
     return ({
         count,
-        increment
+        increment , decrement , change:changeByAmount
     })
 
 }
