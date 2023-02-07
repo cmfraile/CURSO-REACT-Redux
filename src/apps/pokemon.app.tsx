@@ -6,9 +6,7 @@ export const PokemonApp = () => {
 
     const dispatch = useDispatch<any>();
 
-    useEffect(() => {
-        dispatch( getPokemons() )
-    },[])
+    useEffect(() => {dispatch( getPokemons() )},[])
 
     return(
     <div className="container my-5">
