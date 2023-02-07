@@ -13,9 +13,7 @@ import 'bootstrap/dist/js/bootstrap.min';
 const renderApp = {
   dispatcherExample:() => ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(<React.StrictMode><TDP><DispatcherExample/></TDP></React.StrictMode>),
   redux:() => ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-    <React.StrictMode>
-      <RP><Redux/></RP>
-    </React.StrictMode>
+    <React.StrictMode><RP><Redux/></RP></React.StrictMode>
   )
 };
 
