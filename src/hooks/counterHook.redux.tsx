@@ -1,6 +1,6 @@
 import { useSelector , useDispatch } from "react-redux"
+import counterSlice from "../store/slices/counterSlice";
 import { RootState } from "../store/store"
-import { counterSlice } from "../store/slices/counterSlice";
 
 export const counterReduxHook = () => {
 
@@ -9,9 +9,7 @@ export const counterReduxHook = () => {
 
     const increment = () => {dispatch(counterSlice.actions.increment())};
     const decrement = () => {dispatch(counterSlice.actions.decrement())};
-    const changeByAmount = (newValue:number) => {
-        dispatch(counterSlice.actions.changeByAmount(newValue));
-    };
+    const changeByAmount = (newValue:number) => { dispatch(counterSlice.actions.changeByAmount(newValue)) };
 
     return ({
         count,
