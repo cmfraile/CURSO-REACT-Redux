@@ -5,10 +5,10 @@ const pokemonSlice = createSlice({
     name:'pokemon',
     initialState,
     reducers:{
-        startLoadingPokemons:(state,/* action */) => {
+        startLoadingPokemons:(state) => {
             state.isLoading = true ;
         },
-        setPokemonms:(state,action) => {
+        setPokemons:(state,action) => {
             console.log(action);
         }
     },

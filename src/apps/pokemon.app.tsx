@@ -1,4 +1,14 @@
+import { useEffect } from "react"
+import { useDispatch } from "react-redux"
+import { getPokemons } from "../store/thunks/getPokemons"
+
 export const PokemonApp = () => {
+
+    const dispatch = useDispatch<any>();
+
+    useEffect(() => {
+        dispatch( getPokemons() )
+    },[])
 
     return(
     <div className="container my-5">
