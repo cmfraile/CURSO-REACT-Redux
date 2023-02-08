@@ -1,17 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {page:0,pokemons:[],isLoading:false}
+interface pokemonState {page:number,pokemons:string[],isLoading:boolean,pagesAvailable:{previous:boolean,next:boolean}}
+const initialState:pokemonState = {
+    page:0,
+    pokemons:[],
+    isLoading:false,
+    pagesAvailable:{previous:false,next:false}}
 const pokemonSlice = createSlice({
     name:'pokemon',
     initialState,
     reducers:{
-        startLoadingPokemons:(state) => {
-            state.isLoading = true ;
-        },
+        startLoadingPokemons:({isLoading}) => {isLoading = true},
         setPokemons:(state,action) => {
+
+            const { pagesAvailable , page , pokemons } = action.payload
+
             state.isLoading = false
-            state.page = action.payload.page;
-            state.pokemons = action.payload.pokemons
+            state.pagesAvailable = pagesAvailable;
+            state.page = page;
+            state.pokemons = pokemons;
+
         }
     },
 });
