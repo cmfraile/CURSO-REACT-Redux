@@ -14,6 +14,7 @@ export const todosApi = createApi({
         }),
         getTodo: builder.query({
             query: (todoId) => `/todos/${ todoId }`,
+            transformResponse: (resp:any) => (resp.title),
             keepUnusedDataFor:10
         }),
     })

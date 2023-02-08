@@ -1,7 +1,4 @@
-import { useEffect } from "react"
-import { useDispatch } from "react-redux"
-import { pokemonReduxHook } from "../hooks/pokemonHook.redux"
-import { getPokemons } from "../store/thunks/getPokemons"
+import { pokemonReduxHook } from "../hooks/pokemonHook.redux";
 
 export const PokemonApp = () => {
 
@@ -32,7 +29,6 @@ export const PokemonApp = () => {
         <button type="button" className="btn btn-primary m-2 w-25" onClick={increment}
                 disabled={disabledButton('next')}> +1 </button>
         </div></div>
-        
     </div>)
 }
 
